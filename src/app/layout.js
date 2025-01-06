@@ -1,7 +1,6 @@
-import { Roboto } from 'next/font/google'
-import './globals.css'
 
-// const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] })
+import './globals.css'
+import SmoothScroll from '@/component/SmoothScroll/SmoothScroll'
 import TopNav from '@/component/TopNav/TopNav'
 import Logo from '@/component/Logo/Logo'
 export const metadata = {
@@ -15,7 +14,10 @@ export default function RootLayout({ children }) {
       <body>
       <TopNav />
       <Logo />
+      <SmoothScroll>
       {children}
+      </SmoothScroll>
+ 
       </body>
     </html>
   )
