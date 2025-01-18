@@ -65,6 +65,8 @@ body {
   font-family: 'poppins-regular';
   font-size: var(--font-regular);
   color: var(--color-primary);
+  /* background-color: ; */
+  background-color: var(--color-complementary);
   line-height: 27px;
 }
 
@@ -82,6 +84,7 @@ body {
   font-size: var(--font-small);
   overflow: hidden;
   z-index: 999;
+  white-space: nowrap;
   .nav-item {
     padding:5px 15px 5px 15px ;
     border-right:1px solid var(--color-primary) ;
@@ -181,4 +184,189 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 64px;
+}
+
+
+
+.download-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: row;
+  width: 60vw;
+  position: relative;
+  border: 0.5px solid var(--color-primary);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .download-logo {
+    width: 25%;
+    background-color: var(--color-primary);
+
+  }
+  .download-description {
+    padding: 30px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  .dowload-title {
+    font-size: var(--font-medium);
+  } 
+  .download-subtitle {
+    font-size: var(--font-small);
+    /* transform: translate(0, -10%); */
+    line-height: normal;
+    margin-top: 10px;
+  }
+  .download-meta-data {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--font-very-small);
+    font-weight: bold;
+  }
+  .download-button {
+    display: block;
+    background-color: var(--color-primary);
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+    color: var(--color-complementary);
+    font-size: var(--font-small);
+    text-align: center;
+    margin-top: 50px;
+    transition: 0.2s;
+  }
+  .download-button:hover {
+    opacity: 0.8;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.link-container {
+  width: 50vw;
+}
+
+.form-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .form {
+    width: 60%;
+  }
+  input, textarea {
+    padding: 10px;
+    font-size: var(--font-regular);
+    border: none;
+    outline: none;
+    /* outline: none; */
+    border-bottom: 1px solid var(--color-secondary);
+    width: 100%;
+    font-family: 'poppins-regular';
+    background-color: var(--color-complementary);
+    margin: 10px 0 10px 0;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-family: 'poppins-regular';
+  }
+  input:focus {
+    border-bottom: 1px solid var(--color-primary);
+  }
+  
+  .send-button {
+    width:100% ;
+    padding: 8px 10px 8px 10px;
+    background: var(--color-primary);
+    color: var(--color-complementary);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 60px;
+    margin-top:20px ;
+  }
+
+  .send-button:hover {
+    opacity: 0.8;
+  }
+
+  /* textarea {
+    height: 100px;
+  } */
+}
+
+.documentation {
+  background-color: var(--color-complementary);
+  width: 100vw;
+  padding-top: 20vh;
+  margin-top: 20vh;
+  margin-bottom: 50vh;
+}
+.article-description {
+  width: 60vw;
+  line-height: 30px;
+  p {
+    margin-top: 5px 0 5px 0;
+  }
+}
+.article-section {
+  margin:20px 0 20px 0;
+}
+.article-title {
+  font-size: var(--font-large);
+  margin: 20px 0 20px 0;
+
+}
+
+.dataset-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  div {
+    width: 50%;
+    height: auto;
+  }
+}
+
+.graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+
+  img {
+    width: 50%;
+  }
+}
+.gradient-top, .gradient-bottom {
+  position: fixed;
+  background: black;
+  height: 10vh;
+  width: 100vw;
+}
+.gradient-top {
+  top: 0;
+  left: 0;
+  height: 15vh;
+  background: rgb(242,242,242);
+background: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 50%, rgba(255,255,255,0) 100%);
+}
+.gradient-bottom {
+  bottom: 0;
+  left: 0;
+  background: rgb(242,242,242);
+background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 50%, rgba(255,255,255,0) 100%);
 }
