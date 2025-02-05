@@ -2,7 +2,7 @@
 'use client'
 
 import { NavAtom } from "@/assests/atoms/NavAtom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 
 import { FaLinkedin } from "react-icons/fa6";
@@ -11,9 +11,11 @@ import { FaGithub } from "react-icons/fa6";
 export default function page() {
     const [currPage, setCurrPage] = useRecoilState(NavAtom)
 
+
     useEffect(() => {
         setCurrPage('contact')
     })
+
     return (<>
         <div className="contact">
             <div className="link-container center">
@@ -30,18 +32,18 @@ export default function page() {
             <div className="form-container">
                 <div className="form">
                     <div className="input-field">
-                        <input className="input-text" placeholder="name"></input>
+                        <input className="input-text" placeholder="name" onInput={(e) => {setName(e.target.value)}}></input>
                     </div>
 
                     <div className="input-field">
-                        <input className="input-text" placeholder="email"></input>
+                        <input className="input-text" placeholder="email" onInput={(e) => {setEmail(e.target.value)}}></input>
                     </div>
 
                     <div className="input-field">
-                        <textarea className="input-text" style={{resize:'none'}} placeholder="tell me about it!"></textarea>
+                        <textarea className="input-text" style={{resize:'none'}} placeholder="tell me about it!" onInput={(e) => {setMessage(e.target.value)}}></textarea>
                     </div>
 
-                    <div className="send-button">send</div>
+                    <div className="send-button" onClick={() => {sendMessage()}}>send</div>
                     
                 </div>
             </div>
