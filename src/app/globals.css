@@ -6,6 +6,7 @@
 .Moody-and-monochrome-style-generic-minimalist-concrete-building { color: #262626; }
 
 
+
 :root {
   --color-primary: #262626;
   --color-secondary: #595959;
@@ -369,4 +370,35 @@ background: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 
   left: 0;
   background: rgb(242,242,242);
 background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+.classifier {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .upload-image-section {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .upload-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+
+  .prediction-viewer-section {
+    width: 50vw;
+    height: 100vh;
+  }
 }

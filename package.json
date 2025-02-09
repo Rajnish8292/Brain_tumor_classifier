@@ -19,6 +19,7 @@
     "gsap": "^3.12.5",
     "next": "14.0.4",
     "nodemailer": "^6.10.0",
+    "opencv.js": "^1.2.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.4.0",
